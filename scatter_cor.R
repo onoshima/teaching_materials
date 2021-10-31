@@ -42,5 +42,6 @@ p <- ggplot(dat, aes(x = x, y = y)) +
         strip.background = element_rect(fill="gray30")) +
   labs(x = "", y = "") +
   facet_wrap("rho", labeller = label_parsed)
-
-ggsave("fig/scatter_cor.pdf", device = cairo_pdf)
+p
+ggsave("fig/scatter_cor.pdf", device = cairo_pdf,
+       width = 15, height = 12, units = "cm")
