@@ -8,9 +8,9 @@
 % 面積色付き
 \beginpgfgraphicnamed{integral_areafilled}
 \begin{tikzpicture}[xscale=2]
+ \fill[lightgray] (-1,0)--(-1, 0.51)--(1, 0.51)--(1,0)--cycle;
  \filldraw[fill=lightgray, samples=100,domain=-1:1,very thick]
    plot(\x,-1*\x*\x+1.5) node[above right] {$y=f(x)$};%y=f(x)
- \fill[lightgray] (-1,0)--(-1, 0.5)--(1, 0.5)--(1,0)--cycle;
  \coordinate[label=below left:O] (O) at (-1.2,0); %原点
  \draw[semithick,->,>=stealth] (-1.4, 0)--(1.5, 0) node[below] {$x$}; %x軸
  \draw[semithick,->,>=stealth] (-1.2, -0.2)--(-1.2, 1.7) node[left] {$y$}; %y軸
