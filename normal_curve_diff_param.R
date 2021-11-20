@@ -13,6 +13,7 @@ x <- rep(x0, 3)
 
 p1 <- ggplot(tibble(x, fx, mu), aes(x = x, y = fx, linetype = mu)) +
   geom_line() +
+  scale_x_continuous(breaks = seq(-6, 8, 2)) +
   scale_linetype_manual(
     name = NULL,
     values = c(1, 2, 3),
@@ -47,7 +48,7 @@ p2 <- ggplot(tibble(y, fy, SD), aes(x = y, y = fy, linetype = SD)) +
     labels = c(expression(sigma==1),
                expression(sigma==2),
                expression(sigma==5))) +
-  labs(x = "y", y = "f(y)") +
+  labs(x = "x", y = "f(x)") +
   theme(legend.position = c(1, 1),
         legend.justification = c(1, 1),
         legend.background = element_rect(fill = NA, colour = NA))
